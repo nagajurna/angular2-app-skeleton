@@ -1,7 +1,8 @@
 # Angular2 app skeleton
 
-Front : Angular2 (Angular QuickStart source)
-Back : Node, Express, MongoDB, Mongoose, nodeMailer
+* Front : Angular2 (Angular QuickStart source)
+
+* Back : Node, Express, MongoDB, Mongoose, nodeMailer
 
 Includes custom local authentification strategy
 

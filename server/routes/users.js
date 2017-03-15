@@ -14,6 +14,7 @@ const User = require('../Models/User');
 const ERR = require('../utils/errMessages');
 const emailRegExp = require('../utils/emailReg');
 
+//node mailer transporter object
 let transporter = nodemailer.createTransport({
     service: process.env.MAIL_SERVICE,//any service (gmail,sendgrid,mailgun,...)
     auth: {

@@ -21,13 +21,15 @@ import { UserProfileEditComponent }  from './components/user-profile-edit/user-p
 import { UserPasswordEditComponent }  from './components/user-password-edit/user-password-edit.component';
 import { UserPasswordChangedComponent }  from './components/user-password-changed/user-password-changed.component';
 
+import { NavTransitionDirective }  from './directives/nav-transition/nav-transition.directive';
+
 import { UserService } from './services/user.service';
 import { AdminAuthService } from './services/admin-auth.service';
 import { AuthService } from './services/auth.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpModule, AppRoutingModule ],
-  declarations: [ AppComponent, HomeComponent, AdminComponent, UsersComponent, AdminUserComponent, UserComponent, RegisterComponent, LoginComponent, ForgotPasswordComponent, ForgotPasswordMailSentComponent, PasswordResetComponent, UserProfileComponent, UserProfileEditComponent, UserPasswordEditComponent, UserPasswordChangedComponent ],
+  declarations: [ AppComponent, HomeComponent, AdminComponent, UsersComponent, AdminUserComponent, UserComponent, RegisterComponent, LoginComponent, ForgotPasswordComponent, ForgotPasswordMailSentComponent, PasswordResetComponent, UserProfileComponent, UserProfileEditComponent, UserPasswordEditComponent, UserPasswordChangedComponent, NavTransitionDirective ],
   providers: [ UserService, AdminAuthService, AuthService ],
   bootstrap:    [ AppComponent ]
 })
