@@ -1,0 +1,29 @@
+<div class="side-content" *ngIf="user">
+	<h2>Modifiez vos identifiants</h2>
+	<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+	<span class="error" *ngIf="error.message">{{error.message}}</span>
+		<p>
+			<label>Nom : <br><input name="name" type="text" [ngModel]="user.name" (input)="clear_errors('name')"></label>
+			<span class="error" *ngIf="error.errors && error.errors.name">{{error.errors.name.message}}</span>
+		</p>
+		<p>
+			<label>E-mail : <br><input name="email" type="text" [ngModel]="user.email" (input)="clear_errors('email')"></label>
+			<span class="error" *ngIf="error.errors && error.errors.email">{{error.errors.email.message}}</span>
+		</p>
+		<p>
+			<label>Mot de passe : <br><input name="password" type="password" ngModel (input)="clear_errors('password')"></label>
+			<span class="error" *ngIf="error.errors && error.errors.password">{{error.errors.password.message}}</span>
+		</p>
+		<input name="id" type="hidden" [ngModel]="user.id">
+		<button type="submit">Valider</button>
+	</form>
+	<hr>
+	<p>
+		<a (click)="change_view('passwordEdit')">Modifier son mot de passe</a>
+	</p>
+	<hr>
+	<p>
+		<a (click)="change_view('profile')">Retour</a>
+	</p>
+	
+</div>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Angular skelet</title>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Single page app, Angular2, ExpressJS">
+	<meta name="description" content="A single page application skeleton">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="normalize.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
+
+    <!-- Polyfill(s) for older browsers -->
+    <script src="core-js/client/shim.min.js"></script>
+
+    <script src="zone.js/dist/zone.js"></script>
+    <script src="systemjs/dist/system.src.js"></script>
+
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('main.js').catch(function(err){ console.error(err); });
+    </script>
+  </head>
+
+  <body>
+    <my-app>Loading...</my-app>
+  </body>
+</html>

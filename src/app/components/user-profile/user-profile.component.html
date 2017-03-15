@@ -1,0 +1,18 @@
+<div class="side-content" *ngIf="user">
+	<span class="error" *ngIf="error.message">{{error.message}}</span>
+	<h2><a [routerLink]="['/users/', user.id ]" (click)="close()">{{user.name}}</a></h2>
+	<h3>{{user.email}}</h3>
+	<hr>
+	<p>
+		<a (click)="change_view('profileEdit')">Modifier ses identifiants</a>
+	</p>
+	<hr>
+	<p>
+		<a (click)="change_view('passwordEdit')">Modifier son mot de passe</a>
+	</p>
+	<hr>
+	<p>
+		<a (click)="logout()">Se déconnecter</a>
+	</p>
+	
+</div>

@@ -1,0 +1,12 @@
+<div class="content" >
+	<h1><a routerLink="/admin/">Admin</a></h1>
+	<h2><a [routerLink]="['/admin/users/', { id: user.id }]">Users</a></h2>
+	<h3>{{user.name}}</h3>
+	<p>{{user.email}}</p>
+	<p>créé le : {{user.created_at | date:'dd-M-yyyy'}}</p>
+	<p>modifié le : {{user.updated_at | date:'dd-M-yyyy'}}</p>
+	<p>admin : {{user.admin}}</p>
+</div>
+
+
+

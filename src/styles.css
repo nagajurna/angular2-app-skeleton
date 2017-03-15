@@ -1,0 +1,130 @@
+* {
+	box-sizing: border-box;
+}
+
+
+body {
+	font-family: 'Roboto', sans-serif;
+	overflow: visible;
+}
+
+h1, h2, h3 {
+	font-family: 'Roboto Slab', serif;
+}
+
+body.fixed {
+	overflow: hidden;
+}
+
+/*
+a
+*/
+a {
+	color: #757575;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a:hover, a.active, li.selected a {
+	color: #000;
+}
+
+/*
+button
+*/
+
+button {
+	padding: 5px;
+}
+
+
+/*
+container
+*/
+#container {
+	width: 100%;
+	padding-top: 70px;
+}
+
+/*
+content
+*/
+.content {
+	width: 100%;
+	padding: 15px;
+}
+
+@media only screen and (min-width: 768px) {
+
+	.content {
+		max-width: 900px;
+		margin: auto;
+		padding: 15px;
+	}
+
+}
+
+/*
+side-content
+*/
+.side-content {
+	width: 100%;
+	margin: auto;
+	padding: 0px 15px;
+}
+
+/*
+side-menu
+*/
+#side-menu {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	right: -100%;
+/*
+	transition: right 0.15s ease-in-out;
+	-webkit-transition: right 0.15s ease-in-out;
+*/
+	background: #FAFAFA;
+	overflow-x: auto;
+}
+
+@media only screen and (min-width: 420px) {
+	#side-menu {
+		width: 420px;
+		right: -433px;
+		box-shadow: -3px 0px 10px rgba(0, 0, 0, 0.5);
+	}
+}
+
+#side-menu.show {
+	right: 0px;
+}
+
+#side-menu-header {
+	position: relative;
+	width: 100%;
+	height: 50px;
+}
+
+#side-menu-close {
+	display: inline-block;
+	position: absolute;
+	right: 0px;
+	padding: 20px;
+}
+
+#side-menu input[type=text], #side-menu input[type=password] {
+	width: 100%;
+	height: 30px;
+	margin-top: 2px;
+}
+
+#side-menu hr {
+	margin-top: 24px;
+	margin-bottom: 24px;
+}
+
+
+

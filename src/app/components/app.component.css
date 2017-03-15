@@ -1,0 +1,41 @@
+/*
+navbar
+*/
+nav {
+	height: 70px;
+	width: 100%;
+	background-color: #e0e0e0;
+	position: fixed;
+	box-shadow: none;
+	transition: box-shadow 0.2s;
+	-webkit-transition: box-shadow 0.2s;
+}
+
+nav.scrolled {
+	box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+nav ul {
+	margin: 0px;
+	padding: 0px 15px;
+	list-style-type: none;
+}
+
+nav ul li {
+	float: left;
+	padding: 20px 10px;
+}
+
+nav ul.right li {
+	float: right;
+	padding: 20px 10px;
+}
+
+
+
+
+
+
+
+
+

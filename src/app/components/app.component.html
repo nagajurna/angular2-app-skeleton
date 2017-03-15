@@ -1,0 +1,28 @@
+<nav>
+	<ul>
+		<li><a id="brand" routerLink="/home" routerLinkActive="active" (click)="close_sideMenu()">App</a></li>
+	</ul>
+	<ul id="links" class="right">
+		<li id="user" class="on"><a id="side-menu-open" (click)="toggle_sideMenu()" >{{userlink}}</a></li>
+		<li id="admin" *ngIf="admin"><a routerLink="/admin/" routerLinkActive="active" (click)="close_sideMenu()">Admin</a></li>
+	</ul>
+</nav>
+<div id="container">
+<router-outlet></router-outlet>
+</div>
+<div id="side-menu" [ngClass]="{show: show}">
+	<div id="side-menu-header">
+		<a id="side-menu-close" (click)="toggle_sideMenu()">Fermer</a>
+	</div>
+	<div id="side-menu-container" [ngSwitch]="sideMenuView">
+		<register *ngSwitchCase="'register'" (onView)="onView($event)" (onLogged)="onLogged($event)"></register>
+		<login *ngSwitchCase="'login'" (onView)="onView($event)" (onLogged)="onLogged($event)"></login>
+		<forgot-password *ngSwitchCase="'forgotPassword'" (onView)="onView($event)"></forgot-password>
+		<forgot-password-mail-sent *ngSwitchCase="'forgotPasswordMailSent'" (onView)="onView($event)"></forgot-password-mail-sent>
+		<user-profile *ngSwitchCase="'profile'" (onView)="onView($event)" [user]="user" (onLogged)="onLogged($event)"  (onClose)="onClose($event)"></user-profile>
+		<user-profile-edit *ngSwitchCase="'profileEdit'" (onView)="onView($event)" [user]="user" (onUpdated)="onUpdated($event)"></user-profile-edit>
+		<user-password-edit *ngSwitchCase="'passwordEdit'" (onView)="onView($event)" [user]="user"></user-password-edit>
+		<user-password-changed *ngSwitchCase="'passwordChanged'" (onView)="onView($event)"></user-password-changed>
+		<div *ngSwitchDefault></div>
+	</div>
+</div>
