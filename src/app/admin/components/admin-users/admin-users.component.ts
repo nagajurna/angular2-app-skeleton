@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
-import { UserService } from '../../services/user.service';
+import { UserService } from '../../../services/user.service';
 
 @Component({
-	templateUrl: 'app/components/users/users.component.html',
-	styleUrls: [ 'app/components/users/users.component.css' ]
+	templateUrl: 'app/admin/components/admin-users/admin-users.component.html',
+	styleUrls: [ 'app/admin/components/admin-users/admin-users.component.css' ]
 })
-export class UsersComponent implements OnInit  { 
+export class AdminUsersComponent implements OnInit  { 
 	private users: any[] = [];
 	private selectedId: string;
 	

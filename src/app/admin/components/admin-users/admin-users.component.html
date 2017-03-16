@@ -1,0 +1,8 @@
+<ul>
+	<li *ngFor="let user of users" [class.selected]="isSelected(user)">
+		<p><a [routerLink]="['./', user._id ]">{{user.name}}</a></p>
+	</li>
+</ul>
+
+
+

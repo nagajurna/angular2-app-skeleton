@@ -3,13 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule }    from '@angular/http';
 
-import { AppRoutingModule }     from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
+import { AdminModule } from './admin/admin.module';
 
 import { AppComponent }  from './components/app.component';
 import { HomeComponent }  from './components/home/home.component';
-import { AdminComponent }  from './components/admin/admin.component';
-import { UsersComponent }  from './components/users/users.component';
-import { AdminUserComponent }  from './components/admin-user/admin-user.component';
 import { UserComponent }  from './components/user/user.component';
 import { RegisterComponent }  from './components/register/register.component';
 import { LoginComponent }  from './components/login/login.component';
@@ -24,13 +22,14 @@ import { UserPasswordChangedComponent }  from './components/user-password-change
 import { NavTransitionDirective }  from './directives/nav-transition/nav-transition.directive';
 
 import { UserService } from './services/user.service';
-import { AdminAuthService } from './services/admin-auth.service';
 import { AuthService } from './services/auth.service';
+import { AdminAuthService } from './services/admin-auth.service';
+
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, HttpModule, AppRoutingModule ],
-  declarations: [ AppComponent, HomeComponent, AdminComponent, UsersComponent, AdminUserComponent, UserComponent, RegisterComponent, LoginComponent, ForgotPasswordComponent, ForgotPasswordMailSentComponent, PasswordResetComponent, UserProfileComponent, UserProfileEditComponent, UserPasswordEditComponent, UserPasswordChangedComponent, NavTransitionDirective ],
-  providers: [ UserService, AdminAuthService, AuthService ],
+  imports:      [ BrowserModule, FormsModule, HttpModule, AdminModule, AppRoutingModule ],
+  declarations: [ AppComponent, HomeComponent, UserComponent, RegisterComponent, LoginComponent, ForgotPasswordComponent, ForgotPasswordMailSentComponent, PasswordResetComponent, UserProfileComponent, UserProfileEditComponent, UserPasswordEditComponent, UserPasswordChangedComponent, NavTransitionDirective ],
+  providers: [ UserService, AuthService, AdminAuthService ],
   bootstrap:    [ AppComponent ]
 })
 

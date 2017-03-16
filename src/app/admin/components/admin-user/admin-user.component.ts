@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
-import { UserService } from '../../services/user.service';
+import { UserService } from '../../../services/user.service';
 
 @Component({
-	templateUrl: 'app/components/admin-user/admin-user.component.html',
-	styleUrls: [ 'app/components/admin-user/admin-user.component.css' ]
+	templateUrl: 'app/admin/components/admin-user/admin-user.component.html',
+	styleUrls: [ 'app/admin/components/admin-user/admin-user.component.css' ]
 })
 export class AdminUserComponent implements  OnInit { 
 	private user: any = {};
