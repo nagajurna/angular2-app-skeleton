@@ -18,6 +18,3 @@ Includes custom local authentification strategy
 
 * npm start
 
-## Test
-
-* mock services to create
