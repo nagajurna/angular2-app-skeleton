@@ -18,4 +18,4 @@ import { AdminAuthService } from '../services/admin-auth.service';
   providers: [ UserService, AdminAuthService]
 })
 
-export class AdminModule { }
+export class AdminModule {}

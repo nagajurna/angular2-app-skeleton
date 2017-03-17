@@ -9,11 +9,11 @@ import { UserService } from '../services/user.service';
 })
 
 export class AppComponent implements OnInit { 
-	private show : boolean = false;
-	private sideMenuView : string;
-	private user: any;
-	private userlink: string;
-	private admin: boolean;
+	show : boolean = false;
+	sideMenuView : string;
+	user: any;
+	userlink: string = 'Connexion';
+	admin: boolean;
 	error: any = {};
 	
 	constructor(private userService: UserService) {}

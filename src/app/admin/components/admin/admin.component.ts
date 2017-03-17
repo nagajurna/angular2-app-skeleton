@@ -4,4 +4,4 @@ import { Component } from '@angular/core';
 	templateUrl: 'app/admin/components/admin/admin.component.html',
 	styleUrls: [ 'app/admin/components/admin/admin.component.css' ]
 })
-export class AdminComponent  {  }
+export class AdminComponent  { title = 'Admin' }

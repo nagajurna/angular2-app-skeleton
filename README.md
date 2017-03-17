@@ -18,3 +18,6 @@ Includes custom local authentification strategy
 
 * npm start
 
+## Test (Karma/Jasmin)
+
+* nmp test

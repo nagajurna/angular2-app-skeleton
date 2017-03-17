@@ -12,7 +12,7 @@
 </div>
 <div id="side-menu" [ngClass]="{show: show}">
 	<div id="side-menu-header">
-		<a id="side-menu-close" (click)="toggle_sideMenu()">Fermer</a>
+		<a id="side-menu-close" (click)="toggle_sideMenu()" routerLinkActive="active" >Fermer</a>
 	</div>
 	<div id="side-menu-container" [ngSwitch]="sideMenuView">
 		<register *ngSwitchCase="'register'" (onView)="onView($event)" (onLogged)="onLogged($event)"></register>
